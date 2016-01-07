@@ -12,7 +12,7 @@
 @interface PCEditPhotoViewController ()
 
 {
-
+    NSArray *filtersArray;
 }
 
 @end
@@ -38,6 +38,20 @@
     NSLog(@"%@", filters);
     [filters count];
     NSLog(@"一共有 %li 種 CIFilter 濾鏡效果", [filters count]);
+    
+    filtersArray = @[@"CIColorControls",
+                     @"CIHueAdjust",
+                     @"CIPhotoEffectInstant",
+                     @"CIGammaAdjust",
+                     @"CILinearToSRGBToneCurve",
+                     @"CISRGBToneCurveToLinear",
+                     @"CIVibrance",
+                     @"CIPhotoEffectProcess",
+                     @"CIPhotoEffectFade",
+                     @"CIPhotoEffectTransfer",
+                     @"CIPhotoEffectMono",
+                     @"CIVignette",];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -45,6 +59,30 @@
     [super viewWillAppear:animated];
     
     displayImageView.image = photo;
+}
+
+#pragma mark - picker Delegate & dataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [filtersArray count];//每個轉軸N個選項
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return filtersArray[row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    displayImageView.image = [self filterWithImage:photo index:row + 1];
+    
+    NSLog(@"%@", [[CIFilter filterWithName:filtersArray[row]] attributes]);
 }
 
 -(UIImage *)filterWithImage:(UIImage *)image index:(NSInteger)index
@@ -122,11 +160,10 @@
     
     // 轉換圖片
     CGImageRef cgImage = [context createCGImage:outputImage fromRect:[outputImage extent]];
-    UIImage *newImage = [UIImage imageWithCGImage:cgImage];
+    UIImage *newImage = [UIImage imageWithCGImage: cgImage scale:photo.scale orientation:photo.imageOrientation];
     
     // 釋放 C 對象
     CGImageRelease(cgImage);
-    
     return newImage;
 }
 

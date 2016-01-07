@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-PT-IYJ">
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-PT-IYJ">
                     <rect key="frame" x="0.0" y="444" width="320" height="124"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -73,6 +73,16 @@
                         <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="Bpd-HO-ude"/>
                     </connections>
                 </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wR-fs-oMu">
+                    <rect key="frame" x="0.0" y="444" width="320" height="124"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="124" id="2Tt-8t-xf4"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="YFO-CN-aWg"/>
+                        <outlet property="delegate" destination="-1" id="nDc-8r-QnL"/>
+                    </connections>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -85,13 +95,16 @@
                 <constraint firstAttribute="trailing" secondItem="tSe-G7-Snr" secondAttribute="trailing" constant="8" id="LSc-Lt-BP6"/>
                 <constraint firstItem="tSe-G7-Snr" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="Lva-24-OhT"/>
                 <constraint firstItem="vSP-PT-IYJ" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Nug-Yl-tXO"/>
+                <constraint firstItem="8wR-fs-oMu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="RRY-C7-buJ"/>
+                <constraint firstAttribute="trailing" secondItem="8wR-fs-oMu" secondAttribute="trailing" id="TGh-9g-L2d"/>
                 <constraint firstItem="wPS-NO-AK8" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="TeP-FM-Ey5"/>
                 <constraint firstAttribute="bottom" secondItem="vSP-PT-IYJ" secondAttribute="bottom" id="WFN-82-Fzu"/>
                 <constraint firstItem="MxK-U6-Gj0" firstAttribute="top" secondItem="1" secondAttribute="top" constant="124" id="bbv-36-PSu"/>
                 <constraint firstAttribute="trailing" secondItem="wPS-NO-AK8" secondAttribute="trailing" id="dR7-5m-LSB"/>
                 <constraint firstItem="Y40-xC-Hww" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="fvd-N1-Kb4"/>
+                <constraint firstAttribute="bottom" secondItem="8wR-fs-oMu" secondAttribute="bottom" id="vAs-Bq-mLM"/>
             </constraints>
-            <point key="canvasLocation" x="708" y="35"/>
+            <point key="canvasLocation" x="791" y="-62"/>
         </view>
     </objects>
 </document>
