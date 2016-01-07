@@ -12,7 +12,7 @@
 		C383BCC418C5CD22001C8241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C383BCC318C5CD22001C8241 /* UIKit.framework */; };
 		C383BCCA18C5CD22001C8241 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C383BCC818C5CD22001C8241 /* InfoPlist.strings */; };
 		C383BCCC18C5CD22001C8241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C383BCCB18C5CD22001C8241 /* main.m */; };
-		C383BCD018C5CD22001C8241 /* PCAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C383BCCF18C5CD22001C8241 /* PCAppDelegate.mm */; };
+		C383BCD018C5CD22001C8241 /* PCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C383BCCF18C5CD22001C8241 /* PCAppDelegate.m */; };
 		C383BCD218C5CD22001C8241 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C383BCD118C5CD22001C8241 /* Images.xcassets */; };
 		C383BCD918C5CD22001C8241 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C383BCD818C5CD22001C8241 /* XCTest.framework */; };
 		C383BCDA18C5CD22001C8241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C383BCBF18C5CD22001C8241 /* Foundation.framework */; };
@@ -23,6 +23,7 @@
 		C383BCF218C5CD35001C8241 /* PCShotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C383BCF018C5CD35001C8241 /* PCShotViewController.xib */; };
 		C383BCF618C5CDE6001C8241 /* PCEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C383BCF418C5CDE6001C8241 /* PCEditPhotoViewController.m */; };
 		C383BCF718C5CDE6001C8241 /* PCEditPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C383BCF518C5CDE6001C8241 /* PCEditPhotoViewController.xib */; };
+		D01502F21C3E45C100DEF699 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01502F11C3E45C100DEF699 /* Launch Screen.storyboard */; };
 		D0FF85D61A885F3E006288BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FF85D51A885F3E006288BD /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,7 @@
 		C383BCCB18C5CD22001C8241 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C383BCCD18C5CD22001C8241 /* PonChiCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PonChiCamera-Prefix.pch"; sourceTree = "<group>"; };
 		C383BCCE18C5CD22001C8241 /* PCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCAppDelegate.h; sourceTree = "<group>"; };
-		C383BCCF18C5CD22001C8241 /* PCAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PCAppDelegate.mm; sourceTree = "<group>"; };
+		C383BCCF18C5CD22001C8241 /* PCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCAppDelegate.m; sourceTree = "<group>"; };
 		C383BCD118C5CD22001C8241 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C383BCD718C5CD22001C8241 /* PonChiCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PonChiCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C383BCD818C5CD22001C8241 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,6 +60,7 @@
 		C383BCF318C5CDE6001C8241 /* PCEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCEditPhotoViewController.h; sourceTree = "<group>"; };
 		C383BCF418C5CDE6001C8241 /* PCEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCEditPhotoViewController.m; sourceTree = "<group>"; };
 		C383BCF518C5CDE6001C8241 /* PCEditPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCEditPhotoViewController.xib; sourceTree = "<group>"; };
+		D01502F11C3E45C100DEF699 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D0FF85D51A885F3E006288BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,13 +124,14 @@
 			isa = PBXGroup;
 			children = (
 				C383BCCE18C5CD22001C8241 /* PCAppDelegate.h */,
-				C383BCCF18C5CD22001C8241 /* PCAppDelegate.mm */,
+				C383BCCF18C5CD22001C8241 /* PCAppDelegate.m */,
 				C383BCEE18C5CD35001C8241 /* PCShotViewController.h */,
 				C383BCEF18C5CD35001C8241 /* PCShotViewController.m */,
 				C383BCF018C5CD35001C8241 /* PCShotViewController.xib */,
 				C383BCF318C5CDE6001C8241 /* PCEditPhotoViewController.h */,
 				C383BCF418C5CDE6001C8241 /* PCEditPhotoViewController.m */,
 				C383BCF518C5CDE6001C8241 /* PCEditPhotoViewController.xib */,
+				D01502F11C3E45C100DEF699 /* Launch Screen.storyboard */,
 				C383BCD118C5CD22001C8241 /* Images.xcassets */,
 				C383BCC618C5CD22001C8241 /* Supporting Files */,
 			);
@@ -243,6 +246,7 @@
 				C383BCF718C5CDE6001C8241 /* PCEditPhotoViewController.xib in Resources */,
 				C383BCF218C5CD35001C8241 /* PCShotViewController.xib in Resources */,
 				C383BCCA18C5CD22001C8241 /* InfoPlist.strings in Resources */,
+				D01502F21C3E45C100DEF699 /* Launch Screen.storyboard in Resources */,
 				C383BCD218C5CD22001C8241 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +269,7 @@
 				C383BCF618C5CDE6001C8241 /* PCEditPhotoViewController.m in Sources */,
 				C383BCF118C5CD35001C8241 /* PCShotViewController.m in Sources */,
 				C383BCCC18C5CD22001C8241 /* main.m in Sources */,
-				C383BCD018C5CD22001C8241 /* PCAppDelegate.mm in Sources */,
+				C383BCD018C5CD22001C8241 /* PCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -373,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -387,6 +391,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PonChiCamera/PonChiCamera-Prefix.pch";
 				INFOPLIST_FILE = "PonChiCamera/PonChiCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -400,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PonChiCamera/PonChiCamera-Prefix.pch";
 				INFOPLIST_FILE = "PonChiCamera/PonChiCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -114,6 +114,10 @@
 
 - (IBAction)shotAction:(id)sender
 {
+#if TARGET_IPHONE_SIMULATOR
+    
+#else
+    
     AVCaptureConnection *myVideoConnection = nil;
     
     //從 AVCaptureStillImageOutput 中取得正確類型的 AVCaptureConnection
@@ -140,13 +144,15 @@
             
             addView.hidden = YES;
             /*
-            //取得影像資料（需要ImageIO.framework 與 CoreMedia.framework）
-            CFDictionaryRef myAttachments = CMGetAttachment(imageDataSampleBuffer, kCGImagePropertyExifDictionary, NULL);
-            NSLog(@"影像屬性: %@", myAttachments);
+             //取得影像資料（需要ImageIO.framework 與 CoreMedia.framework）
+             CFDictionaryRef myAttachments = CMGetAttachment(imageDataSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+             NSLog(@"影像屬性: %@", myAttachments);
              */
             
         }
     }];
+    
+#endif
 }
 
 - (IBAction)resetShotAction:(id)sender
