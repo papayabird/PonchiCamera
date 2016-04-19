@@ -50,7 +50,8 @@
                      @"CIPhotoEffectFade",
                      @"CIPhotoEffectTransfer",
                      @"CIPhotoEffectMono",
-                     @"CIVignette",];
+                     @"CIVignette",
+                     @"CINoiseReduction"];
 
 }
 
@@ -150,6 +151,11 @@
             [filter setValue:ciSourceImage forKey:kCIInputImageKey];
             [filter setValue:@(1.9) forKey:kCIInputRadiusKey];
             [filter setValue:@(1.4) forKey:kCIInputIntensityKey];
+            break;
+        case 13:
+            filter = [CIFilter filterWithName:@"CINoiseReduction"];
+            [filter setValue:ciSourceImage forKey:kCIInputImageKey];
+            [filter setValue:@(0.80) forKey:kCIInputSharpnessKey];
             break;
         default:
             break;
